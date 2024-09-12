@@ -1,0 +1,12 @@
+image: gitpod/workspace-full
+# Commands that will run on workspace start
+tasks:
+  - name: Setup, Install & Build
+    init: pnpm install
+    command: pnpm dev
+
+ports:
+  - port: 5173
+    onOpen: open-preview
+    name: Website
+    protocol: http
